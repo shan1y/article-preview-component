@@ -1,12 +1,8 @@
 const socials = document.querySelector(".open-share")
 const shareBtn = document.getElementById("share")
-const unclick= document.getElementById("unclick")
+const triangle=document.querySelector(".triangle-down")
 
 shareBtn.addEventListener("click", () => {
     socials.classList.toggle("clicked")
+    triangle.classList.toggle("clicked")
 })
-
-unclick.addEventListener("click", () => {
-    socials.classList.remove("clicked")
-})
-

@@ -26,6 +26,10 @@ ul {
   color: hsl(228, 45%, 44%);
 }
 
+h2 {
+  font-size: 15px;
+}
+
 img {
   max-width: 100%;
 }
@@ -48,7 +52,7 @@ p {
 }
 
 .container .description {
-  padding: 2rem;
+  padding: 1.3rem;
 }
 
 .container .description h1 {
@@ -67,19 +71,18 @@ p {
   justify-content: space-between;
   background-color: var(--verydarkgreyblue);
   position: absolute;
-  height: 0;
+  height: 0px;
   overflow: hidden;
-  width: calc(100% + 64px);
-  left: -2rem;
-  bottom: -30px;
+  width: calc(100% + 43px);
+  left: -21px;
+  bottom: -19px;
   border-radius: 0 0 20px 20px;
   color: white;
   transition: all 0.4s ease-in-out;
 }
 
 .container .avatar .open-share.clicked {
-  height: 6rem;
-  overflow: auto;
+  height: 5rem;
 }
 
 .open-share div {
@@ -92,6 +95,7 @@ p {
   justify-content: center;
   text-transform: uppercase;
   color: var(--greyishblue);
+  letter-spacing: 7px;
 }
 
 .open-share > div:first-child ul {
@@ -157,6 +161,13 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  h1 {
+    margin-bottom: 20px;
+  }
+  .avatar-img {
+    margin-top: 30px;
+  }
+
   .container .main-img img {
     border-radius: 20px 0 0 20px;
     width: 1000px;
@@ -165,20 +176,39 @@ p {
 
   .container .avatar .open-share {
     left: 50%;
-    bottom: 50px;
+    bottom: 70px;
     width: 300px;
     border-radius: 20px;
     overflow: hidden;
   }
 
-  .container .avatar .open-share .triangle-down {
+  .triangle-down.clicked {
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 87%;
+    top: -44%;
     margin-left: -5px;
-    border-width: 10px;
+    border-width: 16px;
     border-style: solid;
-    border-color: hsl(64, 71%, 32%) transparent transparent transparent;
+    border-color: var(--verydarkgreyblue) transparent transparent transparent;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .open-share.clicked {
+    box-shadow: rgb(104 118 172 / 20%) 0px 10px 10px 0px,
+      rgb(0 0 0 / 6%) 0px 0px 0px 1px;
+  }
+
+  .open-share div {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .open-share > div:first-child ul li {
+    margin: 0px 20px;
   }
 }
 
