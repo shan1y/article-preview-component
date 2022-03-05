@@ -161,6 +161,13 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  body {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   h1 {
     margin-bottom: 20px;
   }
@@ -214,10 +221,7 @@ p {
 
 @media (min-width: 992px) {
   body {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
     border-radius: 0px;
   }
